@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+
+        app:layout_constraintDimensionRatio="1">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_v1"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.4">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+
+        <DigitalClock
+            android:id="@+id/object_1"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintVertical_weight="1"
+            android:background="#FF0000"
+
+            app:layout_constraintStart_toEndOf="@id/object_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/object_4"
+            app:layout_constraintBottom_toTopOf="@id/object_5"
+
+            android:gravity="center" />
+
+
+        <ImageView
+            android:id="@+id/object_2"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintVertical_weight="1"
+
+            app:layout_constraintStart_toEndOf="@id/object_7"
+            app:layout_constraintEnd_toStartOf="@id/object_1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/object_4"
+
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_view_description"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerCrop"
+            android:background="@android:color/holo_blue_bright">
+        </ImageView>
+
+        <ImageButton
+            android:id="@+id/object_3"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintVertical_weight="1"
+
+            app:layout_constraintStart_toEndOf="@id/object_7"
+            app:layout_constraintEnd_toStartOf="@id/object_1"
+            app:layout_constraintTop_toBottomOf="@id/object_4"
+            app:layout_constraintBottom_toTopOf="@id/object_5"
+
+            android:src="@drawable/ic_launcher_foreground"
+            android:contentDescription="@string/sample_text"
+            android:scaleType="centerCrop">
+        </ImageButton>
+
+        <TextView
+            android:id="@+id/object_4"
+            android:background="#FFFF00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintVertical_weight="1"
+
+            app:layout_constraintStart_toEndOf="@id/object_7"
+            app:layout_constraintEnd_toStartOf="@id/object_1"
+            app:layout_constraintTop_toBottomOf="@id/object_2"
+            app:layout_constraintBottom_toTopOf="@id/object_3"
+
+            android:text="@string/sample_text"
+            android:gravity="center">
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/object_5"
+            android:background="#FF00FF"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="2"
+
+            app:layout_constraintStart_toEndOf="@id/guideline_v1"
+            app:layout_constraintEnd_toStartOf="@id/object_1"
+            app:layout_constraintTop_toBottomOf="@id/object_3"
+            app:layout_constraintBottom_toBottomOf="parent">
+        </ProgressBar>
+
+        <RadioButton
+            android:id="@+id/object_6"
+            android:background="#0000FF"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="2"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/object_3"
+            app:layout_constraintTop_toBottomOf="@id/object_3"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            tools:ignore="UseSwitchCompatOrMaterialXml">
+        </RadioButton>
+
+        <Button
+            android:id="@+id/object_7"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintVertical_weight="2"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/object_2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/object_3"
+
+            android:text="@string/click_me">
+
+        </Button>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
